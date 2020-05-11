@@ -1,0 +1,15 @@
+diff --git a/racket/src/rktio/rktio_private.h b/racket/src/rktio/rktio_private.h
+index fec026ec3e..e45e474621 100644
+--- a/racket/src/rktio/rktio_private.h
++++ b/racket/src/rktio/rktio_private.h
+@@ -340,8 +340,10 @@ void rktio_close_fds_after_fork(int len, int skip1, int skip2, int skip3);
+ int rktio_system_fd_is_terminal(rktio_t *rktio, intptr_t fd);
+ 
+ #ifdef RKTIO_USE_PTHREADS
++#ifndef __ANDROID__
+ # define RKTIO_USE_PENDING_OPEN
+ #endif
++#endif
+ 
+ #ifdef RKTIO_USE_PENDING_OPEN
+ struct open_in_thread_t;
