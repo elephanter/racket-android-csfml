@@ -12,3 +12,4 @@ Used libraries:
 
 Android application use activity from sfml to start racket in it's own thread.
 
+There is some little issue: csfml and sfml builded in debug. All library files has -d letter at the end. but racket csfml library loads .so files with names without '-d'. So I manually fix names for .so files in racket csfml library.
