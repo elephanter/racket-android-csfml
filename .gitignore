@@ -1,0 +1,10 @@
+local.properties
+.idea
+.gradle
+build
+android.iml
+app/build
+app/.externalNativeBuild
+app/src/main/obj
+project/app/.cxx/
+project/app/src/main/jni/racket/include

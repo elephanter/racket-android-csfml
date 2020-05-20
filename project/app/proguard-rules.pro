@@ -19,7 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keep class rg.racketlang.android.**
+-keep class org.racketlang.android.**
 -keep class com.google.firebase.** { *; }
 -keep class com.firebase.** { *; }
 -keep class org.apache.** { *; }
@@ -28,3 +28,6 @@
 -keepnames class org.ietf.jgss.** { *; }
 -dontwarn org.apache.**
 -dontwarn org.w3c.dom.**
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
